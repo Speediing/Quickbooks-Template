@@ -126,7 +126,7 @@ module.exports = {
   },
   plugins: [
     require("tailwindcss-animate"),
-    function ({ addComponents }) {
+    function ({ addComponents }: { addComponents: any }) {
       addComponents({
         /* Button components that match shadcn patterns */
         ".btn-primary": {
