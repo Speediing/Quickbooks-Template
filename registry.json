@@ -38,6 +38,10 @@
           "target": "app/globals.css"
         },
         {
+          "path": "src/components/clientLayout.tsx",
+          "type": "registry:component"
+        },
+        {
           "path": "src/app/starters/tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"

@@ -1,36 +1,17 @@
-import { VercelToolbar } from "@vercel/toolbar/next";
-import { Geist, Geist_Mono } from "next/font/google";
-import React, { type ReactNode } from "react";
-import { Toaster } from "sonner";
-
-import { BrandHeader } from "@/components/brand-header";
-import { BrandSidebar } from "@/components/brand-sidebar";
-import { SidebarProvider } from "@/components/ui/sidebar";
-import { cn } from "@/lib/utils";
-
+import type React from "react";
+import type { Metadata } from "next";
+import ClientRootLayout from "@/components/clientLayout";
 import "@/app/globals.css";
 
-const geist = Geist({ subsets: ["latin"] });
+export const metadata: Metadata = {
+  title: "QuickBooks Theme",
+  description: "QuickBooks theme with shadcn/ui",
+};
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: ReactNode;
-}>) {
-  return (
-    <html lang="en" className={cn(geist.className, "bg-background")}>
-      <body>
-        <SidebarProvider>
-          <BrandHeader />
-          <BrandSidebar />
-          <main className="mt-16 flex w-full justify-center">
-            <div className="container">{children}</div>
-          </main>
-          <Toaster />
-        </SidebarProvider>
-
-        {process.env.NODE_ENV === "development" && <VercelToolbar />}
-      </body>
-    </html>
-  );
+}: {
+  children: React.ReactNode;
+}) {
+  return <ClientRootLayout children={children} />;
 }
