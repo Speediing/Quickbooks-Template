@@ -43,7 +43,7 @@ export default async function BlockPage({
 
       <ComponentCard
         name={block.name}
-        baseUrl={process.env.VERCEL_PROJECT_PRODUCTION_URL ?? ""}
+        baseUrl={process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL ?? ""}
         title="Block Preview"
         promptTitle={`${block.title} Block Kit`}
         components={components}

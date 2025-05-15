@@ -46,7 +46,7 @@ export default async function ComponentPage({
 
       <ComponentCard
         name={component.name}
-        baseUrl={process.env.VERCEL_PROJECT_PRODUCTION_URL ?? ""}
+        baseUrl={process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL ?? ""}
         title="Component Preview"
         promptTitle={`${component.title} Component Kit`}
         components={components}
