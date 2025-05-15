@@ -1,25 +1,17 @@
 import type React from "react";
-import { Toaster } from "sonner";
-
-import { BrandHeader } from "@/components/brand-header";
-import { BrandSidebar } from "@/components/brand-sidebar";
-import { SidebarProvider } from "@/components/ui/sidebar";
-
+import type { Metadata } from "next";
+import ClientRootLayout from "@/components/clientLayout";
 import "@/app/globals.css";
+
+export const metadata: Metadata = {
+  title: "QuickBooks Theme",
+  description: "QuickBooks theme with shadcn/ui",
+};
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <SidebarProvider>
-      <BrandHeader />
-      <BrandSidebar />
-      <main className="mt-16 flex w-full justify-center">
-        <div className="container">{children}</div>
-      </main>
-      <Toaster />
-    </SidebarProvider>
-  );
+  return <ClientRootLayout children={children} />;
 }

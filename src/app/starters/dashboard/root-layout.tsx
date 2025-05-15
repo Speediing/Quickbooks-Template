@@ -10,15 +10,7 @@ import { cn } from "@/lib/utils";
 
 import "@/app/globals.css";
 
-const GeistSans = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist-sans",
-});
-
-const GeistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-});
+const geist = Geist({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -26,14 +18,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={cn(
-        GeistSans.variable,
-        GeistMono.variable,
-        "bg-background text-foreground",
-      )}
-    >
+    <html lang="en" className={cn(geist.className, "bg-background")}>
       <body>
         <SidebarProvider>
           <BrandHeader />

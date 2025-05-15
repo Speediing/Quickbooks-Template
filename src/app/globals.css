@@ -1,112 +1,345 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+/* globals.css */
+/* QuickBooks theme with shadcn/ui compatibility */
 :root {
-  --background: oklch(0.97 0.01 80.72);
-  --foreground: oklch(0.3 0.04 30.2);
-  --card: oklch(0.97 0.01 80.72);
-  --card-foreground: oklch(0.3 0.04 30.2);
-  --popover: oklch(0.97 0.01 80.72);
-  --popover-foreground: oklch(0.3 0.04 30.2);
-  --primary: oklch(0.52 0.13 144.17);
-  --primary-foreground: oklch(1.0 0 0);
-  --secondary: oklch(0.96 0.02 147.64);
-  --secondary-foreground: oklch(0.43 0.12 144.31);
-  --muted: oklch(0.94 0.01 74.42);
-  --muted-foreground: oklch(0.45 0.05 39.21);
-  --accent: oklch(0.9 0.05 146.04);
-  --accent-foreground: oklch(0.43 0.12 144.31);
-  --destructive: oklch(0.54 0.19 26.72);
-  --destructive-foreground: oklch(1.0 0 0);
-  --border: oklch(0.88 0.02 74.64);
-  --input: oklch(0.88 0.02 74.64);
-  --ring: oklch(0.52 0.13 144.17);
-
-  --chart-1: oklch(0.67 0.16 144.21);
-  --chart-2: oklch(0.58 0.14 144.18);
-  --chart-3: oklch(0.52 0.13 144.17);
-  --chart-4: oklch(0.43 0.12 144.31);
-  --chart-5: oklch(0.22 0.05 145.73);
-
-  --sidebar: oklch(0.94 0.01 74.42);
-  --sidebar-foreground: oklch(0.3 0.04 30.2);
-  --sidebar-primary: oklch(0.52 0.13 144.17);
-  --sidebar-primary-foreground: oklch(1.0 0 0);
-  --sidebar-accent: oklch(0.9 0.05 146.04);
-  --sidebar-accent-foreground: oklch(0.43 0.12 144.31);
-  --sidebar-border: oklch(0.88 0.02 74.64);
-  --sidebar-ring: oklch(0.52 0.13 144.17);
-
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-
-  --radius: 0.5rem;
-
-  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
-  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
-  --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px
-    hsl(0 0% 0% / 0.1);
-  --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
-  --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px
-    hsl(0 0% 0% / 0.1);
-  --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px
-    hsl(0 0% 0% / 0.1);
-  --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px
-    hsl(0 0% 0% / 0.1);
-  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+  /* shadcn/ui base tokens mapped to QuickBooks design system */
+  --background: #ffffff;
+  --foreground: #393a3d;
+  --card: #ffffff;
+  --card-foreground: #393a3d;
+  --popover: #ffffff;
+  --popover-foreground: #393a3d;
+  --primary: #2ca01c;
+  --primary-foreground: #ffffff;
+  --secondary: #eceef1;
+  --secondary-foreground: #393a3d;
+  --muted: #e3e5e8;
+  --muted-foreground: #6b6c72;
+  --accent: #f4f5f8;
+  --accent-foreground: #393a3d;
+  --destructive: #d52b1e;
+  --destructive-foreground: #ffffff;
+  --border: #d4d7dc;
+  --input: #8d9096;
+  --ring: #2ca01c;
+  
+  /* QuickBooks specific tokens */
+  --qb-tertiary: #393a3d;
+  --qb-info: #0077c5;
+  --qb-positive: #108000;
+  --qb-attention: #ff6a00;
+  --qb-neutral: #6b6c72;
+  
+  /* QuickBooks interaction states */
+  --primary-hover: #258f1d;
+  --primary-active: #108000;
+  --destructive-hover: #c6160f;
+  --destructive-active: #b80000;
+  
+  /* QuickBooks container backgrounds */
+  --container-bg-secondary: #eceef1;
+  --container-bg-tertiary: #e3e5e8;
+  
+  /* Text colors */
+  --text-tertiary: #6b6c72;
+  --text-inverse: #ffffff;
+  
+  /* Additional border colors */
+  --border-primary: #8d9096;
+  --border-secondary: #babec5;
+  
+  /* Link colors */
+  --link: #0365AC;
+  --link-hover: #055393;
+  
+  /* Radius values aligned with shadcn naming */
+  --radius: 4px; /* shadcn default radius */
+  --radius-none: 0px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+  
+  /* Spacing */
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  
+  /* Font family */
+  --font-sans: 'Avenir Next forINTUIT', Avenir, Helvetica, Arial, sans-serif;
+  
+  /* Font sizes */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 28px;
+  --text-3xl: 34px;
+  --text-4xl: 40px;
+  --text-5xl: 48px;
+  
+  /* Font weights */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  
+  /* Line heights */
+  --leading-display: 1.3;
+  --leading-body: 1.5;
+  
+  /* Shadows - aligned with shadcn names */
+  --shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2); /* Default shadow */
+  --shadow-sm: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0px 4px 16px 0px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
 }
 
+/* Dark mode theme */
 .dark {
-  --background: oklch(0.27 0.03 150.77);
-  --foreground: oklch(0.94 0.01 72.66);
-
-  --card: oklch(0.33 0.03 146.99);
-  --card-foreground: oklch(0.94 0.01 72.66);
-  --popover: oklch(0.33 0.03 146.99);
-  --popover-foreground: oklch(0.94 0.01 72.66);
-  --primary: oklch(0.67 0.16 144.21);
-  --primary-foreground: oklch(0.22 0.05 145.73);
-
-  --secondary: oklch(0.39 0.03 142.99);
-  --secondary-foreground: oklch(0.9 0.02 142.55);
-  --muted: oklch(0.33 0.03 146.99);
-  --muted-foreground: oklch(0.86 0.02 76.1);
-  --accent: oklch(0.58 0.14 144.18);
-  --accent-foreground: oklch(0.94 0.01 72.66);
-  --destructive: oklch(0.54 0.19 26.72);
-  --destructive-foreground: oklch(0.94 0.01 72.66);
-  --border: oklch(0.39 0.03 142.99);
-  --input: oklch(0.39 0.03 142.99);
-  --ring: oklch(0.67 0.16 144.21);
-
-  --chart-1: oklch(0.77 0.12 145.3);
-  --chart-2: oklch(0.72 0.14 144.89);
-  --chart-3: oklch(0.67 0.16 144.21);
-  --chart-4: oklch(0.63 0.15 144.2);
-  --chart-5: oklch(0.58 0.14 144.18);
-
-  --sidebar: oklch(0.27 0.03 150.77);
-  --sidebar-foreground: oklch(0.94 0.01 72.66);
-  --sidebar-primary: oklch(0.67 0.16 144.21);
-  --sidebar-primary-foreground: oklch(0.22 0.05 145.73);
-  --sidebar-accent: oklch(0.58 0.14 144.18);
-  --sidebar-accent-foreground: oklch(0.94 0.01 72.66);
-  --sidebar-border: oklch(0.39 0.03 142.99);
-  --sidebar-ring: oklch(0.67 0.16 144.21);
-
-  --radius: 0.5rem;
-
-  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
-  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
-  --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px
-    hsl(0 0% 0% / 0.1);
-  --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
-  --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px
-    hsl(0 0% 0% / 0.1);
-  --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px
-    hsl(0 0% 0% / 0.1);
-  --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px
-    hsl(0 0% 0% / 0.1);
-  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+  /* shadcn/ui base tokens for dark mode */
+  --background: #282828;
+  --foreground: #eceef1;
+  --card: #363639;
+  --card-foreground: #eceef1;
+  --popover: #363639;
+  --popover-foreground: #eceef1;
+  --primary: #53b700;
+  --primary-foreground: #282828;
+  --secondary: #393a3d;
+  --secondary-foreground: #eceef1;
+  --muted: #393a3d;
+  --muted-foreground: #babec5;
+  --accent: #393a3d;
+  --accent-foreground: #eceef1;
+  --destructive: #ff8979;
+  --destructive-foreground: #282828;
+  --border: #6b6c72;
+  --input: #8d9096;
+  --ring: #53b700;
+  
+  /* QuickBooks specific tokens */
+  --qb-tertiary: #393a3d;
+  --qb-info: #34bfff;
+  --qb-positive: #53b700;
+  --qb-attention: #ffac61;
+  --qb-neutral: #babec5;
+  
+  /* QuickBooks interaction states */
+  --primary-hover: #75c533;
+  --primary-active: #87cd4c;
+  --destructive-hover: #ffa194;
+  --destructive-active: #ffaca1;
+  
+  /* QuickBooks container backgrounds */
+  --container-bg-secondary: #313133;
+  --container-bg-tertiary: #393a3d;
+  
+  /* Text colors */
+  --text-tertiary: #babec5;
+  --text-inverse: #282828;
+  
+  /* Additional border colors */
+  --border-primary: #d4d7dc;
+  --border-secondary: #8d9096;
+  
+  /* Link colors */
+  --link: #34bfff;
+  --link-hover: #5dccff;
 }
+
+/* Base styles */
+body {
+  font-family: var(--font-sans);
+  color: var(--foreground);
+  background-color: var(--background);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-bold);
+  line-height: var(--leading-display);
+  color: var(--foreground);
+  margin-top: 0;
+}
+
+h1 {
+  font-size: var(--text-5xl);
+}
+
+h2 {
+  font-size: var(--text-4xl);
+}
+
+h3 {
+  font-size: var(--text-3xl);
+}
+
+h4 {
+  font-size: var(--text-2xl);
+}
+
+h5 {
+  font-size: var(--text-xl);
+}
+
+h6 {
+  font-size: var(--text-base);
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* Button base styles - shadcn/ui compatible */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  font-weight: var(--font-semibold);
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  font-size: var(--text-base);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-primary:active {
+  background-color: var(--primary-active);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.btn-destructive {
+  background-color: var(--destructive);
+  color: var(--destructive-foreground);
+}
+
+.btn-destructive:hover {
+  background-color: var(--destructive-hover);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  color: var(--foreground);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--foreground);
+}
+
+.btn-ghost:hover {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+/* Form elements - shadcn/ui compatible */
+input, textarea, select {
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 12px;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--foreground);
+  transition: all 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--ring);
+  box-shadow: 0 0 0 2px rgba(var(--ring-rgb), 0.2);
+}
+
+label {
+  color: var(--muted-foreground);
+  font-size: var(--text-sm);
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* Card styles - shadcn/ui compatible */
+.card {
+  background-color: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--space-md);
+  color: var(--card-foreground);
+}
+
+.card-title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-sm);
+}
+
+.card-description {
+  color: var(--muted-foreground);
+  margin-bottom: var(--space-md);
+}
+
+/* Utility classes - shadcn/ui compatible */
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary-foreground); }
+.text-muted { color: var(--muted-foreground); }
+.text-accent { color: var(--accent-foreground); }
+.text-destructive { color: var(--destructive); }
+
+.bg-primary { background-color: var(--primary); }
+.bg-secondary { background-color: var(--secondary); }
+.bg-muted { background-color: var(--muted); }
+.bg-accent { background-color: var(--accent); }
+.bg-destructive { background-color: var(--destructive); }
+
+.border-primary { border-color: var(--primary); }
+.border-destructive { border-color: var(--destructive); }
+.border-muted { border-color: var(--muted); }
+
+/* Additional QuickBooks specific utility classes */
+.text-info { color: var(--qb-info); }
+.text-positive { color: var(--qb-positive); }
+.text-attention { color: var(--qb-attention); }
+.text-tertiary { color: var(--text-tertiary); }
+.text-inverse { color: var(--text-inverse); }
+
+.bg-info { background-color: var(--qb-info); }
+.bg-positive { background-color: var(--qb-positive); }
+.bg-attention { background-color: var(--qb-attention); }
+.bg-tertiary { background-color: var(--qb-tertiary); }

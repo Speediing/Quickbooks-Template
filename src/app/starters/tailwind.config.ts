@@ -1,43 +1,54 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    "./pages/**/*.{ts,tsx,js,jsx,mdx}",
-    "./components/**/*.{ts,tsx,js,jsx,mdx}",
-    "./app/**/*.{ts,tsx,js,jsx,mdx}",
-    "*.{ts,tsx,js,jsx,mdx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
+        // Base colors
         background: "var(--background)",
         foreground: "var(--foreground)",
-
         card: "var(--card)",
         "card-foreground": "var(--card-foreground)",
-
         popover: "var(--popover)",
         "popover-foreground": "var(--popover-foreground)",
 
-        primary: "var(--primary)",
-        "primary-foreground": "var(--primary-foreground)",
+        // Primary colors
+        primary: {
+          DEFAULT: "var(--primary)",
+          foreground: "var(--primary-foreground)",
+        },
+        secondary: {
+          DEFAULT: "var(--secondary)",
+          foreground: "var(--secondary-foreground)",
+        },
 
-        secondary: "var(--secondary)",
-        "secondary-foreground": "var(--secondary-foreground)",
+        // UI elements
+        muted: {
+          DEFAULT: "var(--muted)",
+          foreground: "var(--muted-foreground)",
+        },
+        accent: {
+          DEFAULT: "var(--accent)",
+          foreground: "var(--accent-foreground)",
+        },
 
-        muted: "var(--muted)",
-        "muted-foreground": "var(--muted-foreground)",
+        // State colors
+        destructive: {
+          DEFAULT: "var(--destructive)",
+          foreground: "var(--destructive-foreground)",
+        },
 
-        accent: "var(--accent)",
-        "accent-foreground": "var(--accent-foreground)",
-
-        destructive: "var(--destructive)",
-        "destructive-foreground": "var(--destructive-foreground)",
-
+        // Border and input
         border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",
 
+        // Chart colors
         chart: {
           1: "var(--chart-1)",
           2: "var(--chart-2)",
@@ -46,6 +57,7 @@ const config: Config = {
           5: "var(--chart-5)",
         },
 
+        // Sidebar
         sidebar: {
           DEFAULT: "var(--sidebar)",
           foreground: "var(--sidebar-foreground)",
@@ -57,10 +69,13 @@ const config: Config = {
           ring: "var(--sidebar-ring)",
         },
       },
+      fontFamily: {
+        sans: "var(--font-sans)",
+        serif: "var(--font-serif)",
+        mono: "var(--font-mono)",
+      },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        DEFAULT: "var(--radius)",
       },
       boxShadow: {
         "2xs": "var(--shadow-2xs)",
@@ -72,21 +87,7 @@ const config: Config = {
         xl: "var(--shadow-xl)",
         "2xl": "var(--shadow-2xl)",
       },
-      fontFamily: {
-        sans: ["var(--font-sans)", "sans-serif"],
-        mono: ["var(--font-mono)", "monospace"],
-      },
-      keyframes: {
-        "fade-in-scale": {
-          "0%": { opacity: "0", transform: "scale(0.95)" },
-          "100%": { opacity: "1", transform: "scale(1)" },
-        },
-      },
-      animation: {
-        "fade-in-scale": "fade-in-scale 0.3s ease-out",
-      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 };
-export default config;
