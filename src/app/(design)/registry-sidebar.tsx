@@ -34,7 +34,12 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 
-export const componentItems = [
+interface MenuItem {
+  name: string;
+  path: string;
+}
+
+export const componentItems: MenuItem[] = [
   { name: "Accordion", path: "/components/accordion" },
   { name: "Alert", path: "/components/alert" },
   { name: "Avatar", path: "/components/avatar" },
@@ -62,7 +67,7 @@ export const componentItems = [
   { name: "Tooltip", path: "/components/tooltip" },
 ];
 
-export const blockItems = [
+export const blockItems: MenuItem[] = [
   // { name: "Hero", path: "/blocks/hero" },
   // { name: "Login", path: "/blocks/login" },
   // { name: "Promo", path: "/blocks/promo" },
@@ -92,7 +97,7 @@ export function RegistrySidebar() {
       );
       setFilteredBlocks(
         blockItems.filter((item) =>
-          item.name.toLowerCase().includes(searchTerm.toLowerCase())
+          item?.name?.toLowerCase().includes(searchTerm.toLowerCase())
         )
       );
     } else {
