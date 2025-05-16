@@ -2,6 +2,7 @@
 
 import type React from "react";
 import { Search } from "lucide-react";
+import { Input } from "@/components/ui/input";
 
 import { ThemeProvider } from "@/components/theme-provider";
 import { useSearchParams } from "next/navigation";
@@ -437,13 +438,13 @@ export default function ClientRootLayout({
                     <span className="text-gray-600 text-sm">Company</span>
                   </div>
                   <div className="relative flex-1 max-w-2xl mx-auto">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    {/* <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <Search className="h-4 w-4 text-gray-500" />
-                    </div>
-                    <input
+                    </div> */}
+                    <Input
                       type="text"
                       placeholder="Search for transactions, contacts, reports, help and more"
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md text-sm"
+                      className="pl-10 "
                     />
                   </div>
                   <div className="flex items-center gap-4 ml-auto">
