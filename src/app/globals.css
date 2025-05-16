@@ -155,7 +155,6 @@
 
 /* Base styles */
 body {
-  font-family: var(--font-sans);
   color: var(--foreground);
   background-color: var(--background);
   font-size: var(--text-base);
@@ -276,7 +275,6 @@ input, textarea, select {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 8px 12px;
-  font-family: var(--font-sans);
   font-size: var(--text-base);
   color: var(--foreground);
   transition: all 0.2s ease;
