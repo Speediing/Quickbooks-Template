@@ -51,9 +51,9 @@ export default function Dashboard() {
         {/* Tasks Section */}
         <div className="border border-gray-200 shadow-sm rounded-md">
           <div className="pb-2 pt-4 px-4 border-b border-gray-100">
-            <h3 className="text-xs font-medium text-gray-700 uppercase">
+            <span className="text-xs font-medium text-gray-700 uppercase">
               Tasks
-            </h3>
+            </span>
           </div>
           <div className="flex flex-col items-center justify-center py-8 px-4">
             <div className="w-16 h-16 mb-4 bg-green-50 rounded-full flex items-center justify-center">
@@ -74,9 +74,9 @@ export default function Dashboard() {
                 </svg>
               </div>
             </div>
-            <h3 className="text-base font-medium text-gray-800 mb-1">
+            <span className="text-base font-medium text-gray-800 mb-1">
               No tasks yet!
-            </h3>
+            </span>
             <p className="text-sm text-gray-500 text-center">
               Check back soon to stay on top of your to dos.
             </p>
@@ -86,9 +86,9 @@ export default function Dashboard() {
         {/* Shortcuts Section */}
         <div className="border border-gray-200 shadow-sm rounded-md">
           <div className="pb-2 pt-4 px-4 flex justify-between items-center border-b border-gray-100">
-            <h3 className="text-xs font-medium text-gray-700 uppercase">
+            <span className="text-xs font-medium text-gray-700 uppercase">
               Shortcuts
-            </h3>
+            </span>
             <button className="text-gray-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -236,16 +236,16 @@ export default function Dashboard() {
         {/* Bank Accounts */}
         <div className="border border-gray-200 shadow-sm rounded-md">
           <div className="pb-2 pt-4 px-4 border-b border-gray-100">
-            <h3 className="text-xs font-medium text-gray-700 uppercase">
+            <span className="text-xs font-medium text-gray-700 uppercase">
               Bank Accounts
-            </h3>
+            </span>
           </div>
           <div className="px-4 pb-4">
-            <h3 className="text-sm font-medium mb-3 mt-3">
+            <span className="text-sm font-medium mb-3 mt-3 text-gray-700">
               Link your banks to see your balances in one place
-            </h3>
+            </span>
 
-            <div className="mt-4 space-y-3">
+            <div className="mt-4 space-y-3 text-gray-700">
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <div className="w-8 h-8 bg-blue-100 rounded-md flex items-center justify-center mr-3">
@@ -325,23 +325,23 @@ export default function Dashboard() {
               </div>
             </div>
 
-            <button className="w-full mt-4 py-2 border border-gray-300 rounded-md text-sm">
+            <button className="w-full mt-4 py-2 border border-gray-300 rounded-md text-sm text-gray-700">
               Find your bank
             </button>
           </div>
         </div>
 
         {/* Profit & Loss */}
-        <div className="border border-gray-200 shadow-sm rounded-md">
-          <div className="pb-2 pt-4 px-4 border-b border-gray-100">
-            <h3 className="text-xs font-medium text-gray-700 uppercase">
+        <div className="border border-gray-200 shadow-sm rounded-md text-gray-700">
+          <div className="pb-2 pt-4 px-4 border-b border-gray-100 ">
+            <span className="text-xs font-medium text-gray-700 uppercase">
               Profit & Loss
-            </h3>
+            </span>
           </div>
           <div className="px-4 pb-4">
-            <h3 className="text-sm font-medium mb-3 mt-3">
+            <span className="text-sm font-medium mb-3 mt-3 text-gray-700">
               See what you make & spend across all your accounts
-            </h3>
+            </span>
 
             <div className="space-y-2 mb-4">
               <div className="flex justify-between items-center">
@@ -366,16 +366,16 @@ export default function Dashboard() {
         </div>
 
         {/* Expenses */}
-        <div className="border border-gray-200 shadow-sm rounded-md">
+        <div className="border border-gray-200 shadow-sm rounded-md text-gray-700">
           <div className="pb-2 pt-4 px-4 border-b border-gray-100">
-            <h3 className="text-xs font-medium text-gray-700 uppercase">
+            <span className="text-xs font-medium text-gray-700 uppercase">
               Expenses
-            </h3>
+            </span>
           </div>
           <div className="px-4 pb-4">
-            <h3 className="text-sm font-medium mb-3 mt-3">
+            <span className="text-sm font-medium mb-3 mt-3">
               See where your money is going
-            </h3>
+            </span>
 
             <div className="flex justify-center py-4">
               <div className="w-32 h-32 rounded-full border-8 border-gray-100 flex items-center justify-center">
@@ -392,9 +392,9 @@ export default function Dashboard() {
         {/* Invoices */}
         <div className="border border-gray-200 shadow-sm rounded-md">
           <div className="pb-2 pt-4 px-4 border-b border-gray-100">
-            <h3 className="text-xs font-medium text-gray-700 uppercase">
+            <span className="text-xs font-medium text-gray-700 uppercase">
               Invoices
-            </h3>
+            </span>
           </div>
           <div className="px-4 pb-4">
             <div className="space-y-4 mt-3">
@@ -448,18 +448,18 @@ export default function Dashboard() {
       <div className="border border-gray-200 shadow-sm rounded-md mt-6">
         <div className="pb-2 pt-4 px-4 border-b border-gray-100">
           <div className="flex items-center">
-            <h3 className="text-xs font-medium text-gray-700 uppercase mr-2">
+            <span className="text-xs font-medium text-gray-700 uppercase mr-2">
               Cash Flow Trend
-            </h3>
+            </span>
             <span className="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded">
               SAMPLE
             </span>
           </div>
         </div>
         <div className="px-4 pb-4">
-          <h3 className="text-sm font-medium mb-3 mt-3">
+          <span className="text-sm font-medium mb-3 mt-3">
             Track how your money is doing
-          </h3>
+          </span>
 
           <div className="flex justify-end items-center gap-4 text-xs text-gray-500">
             <div className="flex items-center gap-1">

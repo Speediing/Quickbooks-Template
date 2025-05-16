@@ -36,7 +36,7 @@ export default function RootLayout({
       className={cn(
         GeistSans.variable,
         GeistMono.variable,
-        "bg-background text-foreground",
+        "bg-background text-foreground"
       )}
     >
       <body>
