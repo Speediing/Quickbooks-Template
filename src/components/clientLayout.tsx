@@ -54,7 +54,7 @@ export default function ClientRootLayout({
               {/* Logo */}
               <div className="p-4 flex items-center">
                 <img
-                  src="/Quickbooks.png"
+                  src="https://quickbooks-design-system.vercel.app/Quickbooks.png"
                   alt="QuickBooks Logo"
                   style={{ height: 30 }}
                 />
