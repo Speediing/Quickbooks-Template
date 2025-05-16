@@ -38,7 +38,7 @@
           "target": "app/globals.css"
         },
         {
-          "path":"/public/Quickbooks.png",
+          "path":"src/public/Quickbooks.png",
           "type": "registry:file",
           "target": "/public/Quickbooks.png"
         },
