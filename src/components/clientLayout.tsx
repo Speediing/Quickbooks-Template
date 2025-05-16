@@ -53,15 +53,11 @@ export default function ClientRootLayout({
             <aside className="w-[206px] bg-[#222222] text-white flex flex-col shrink-0">
               {/* Logo */}
               <div className="p-4 flex items-center">
-                <div className="w-10 h-10 rounded-full bg-[#2ca01c] flex items-center justify-center mr-2">
-                  <span className="text-white font-bold">qb</span>
-                </div>
-                <div className="text-white">
-                  <div className="text-[10px] uppercase tracking-wide font-medium">
-                    INTUIT
-                  </div>
-                  <div className="text-sm font-bold -mt-0.5">quickbooks</div>
-                </div>
+                <img
+                  src="/Quickbooks.png"
+                  alt="QuickBooks Logo"
+                  style={{ height: 30 }}
+                />
               </div>
 
               {/* New Button */}

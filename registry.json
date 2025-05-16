@@ -38,6 +38,11 @@
           "target": "app/globals.css"
         },
         {
+          "path":"/public/Quickbooks.png",
+          "type": "registry:file",
+          "target": "/public/Quickbooks.png"
+        },
+        {
           "path":"src/components/theme-provider.tsx",
           "type": "registry:file",
           "target": "components/theme-provider.tsx"

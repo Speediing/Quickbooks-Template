@@ -70,29 +70,24 @@ export default function Home() {
           <Card>
             <CardHeader className="space-y-1">
               <div className="flex items-center justify-between">
-                <CardTitle>Blocks</CardTitle>
+                <CardTitle>Dashboard Starters</CardTitle>
                 <div className="rounded-md bg-foreground p-1">
                   <Blocks className="size-5 text-secondary" />
                 </div>
               </div>
               <CardDescription>
-                Pre-built UI blocks for common patterns
+                Pre-built dashboard templates to jumpstart your project
               </CardDescription>
             </CardHeader>
 
             <CardContent>
               <div className="space-y-2">
-                {blockItems.map((item) => (
-                  <div
-                    key={item.name}
-                    className="flex items-center justify-between"
-                  >
-                    <Link href={item.path} className="text-sm hover:underline">
-                      {item.name}
-                    </Link>
-                    <ArrowRight className="size-4 text-muted-foreground" />
-                  </div>
-                ))}
+                <div className="flex items-center justify-between">
+                  <Link href="/starters" className="text-sm hover:underline">
+                    View Dashboard Starters
+                  </Link>
+                  <ArrowRight className="size-4 text-muted-foreground" />
+                </div>
               </div>
             </CardContent>
           </Card>

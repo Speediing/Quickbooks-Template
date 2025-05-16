@@ -3,10 +3,14 @@ import { Squirrel } from "lucide-react";
 export function RegistryLogo() {
   return (
     <>
-      <div className="flex-shrink-0 rounded-md bg-primary p-1">
-        <Squirrel className="size-5 text-secondary" />
-      </div>
-      <span className="font-semibold">Design Registry</span>
+      <img
+        src="/Intuit_QuickBooks_logo.png"
+        alt="QuickBooks Logo"
+        style={{ height: 25 }}
+      />
+      <span className="ml-6 font-semibold text-sm text-black">
+        Design Registry
+      </span>
     </>
   );
 }
