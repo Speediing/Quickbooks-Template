@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "AvenirNEXTforINTUIT";
-  src: url("https://quickbooks-design-system.vercel.app/fonts/AvenirNextforINTUIT-Regular.otf") format("otf");
+  src: url("https://quickbooks-design-system.vercel.app/fonts/AvenirNextforINTUIT-Regular.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -168,7 +168,7 @@ body {
   background-color: var(--background);
   font-size: var(--text-base);
   line-height: var(--leading-body);
-  font-family: "AvenirNEXTforINTUIT", Arial, Helvetica, sans-serif;
+  font-family: "AvenirNEXTforINTUIT", Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
