@@ -2,7 +2,11 @@
 module.exports = {
   content: [
     // Add your content paths here
-    "./src/**/*.{js,jsx,ts,tsx}",
+"./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+    "*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "class", // or 'media' based on your preference
   theme: {
